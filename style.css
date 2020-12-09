@@ -1,0 +1,108 @@
+* {
+    box-sizing: border-box;
+}
+
+html{ height: 100%; }
+
+body {
+    background-color: #f1f1f1;
+    padding: 10px;
+    padding-bottom: 50px; /* for footer */
+    font-family: Arial, sans-serif;
+    position: relative;
+    margin: 0;
+}
+
+/* Center website */
+#wrapper{
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+} 
+
+.gfx{  width: 100%; }
+.widefig{ margin: 30px 0px !important; }
+figure img{ dosplay: block; }
+figure h3{ margin: 0 0 5px 0; font-weight: 300;}
+
+footer{ 
+  height: 50px; 
+  width: 100%; 
+  position: absolute;
+  left:0; 
+  bottom: 0px;
+  font-family: Brush Script MT, Brush Script Std, cursive;
+}
+
+footer div{
+    background-color: #dddddd;
+    width: 100%;
+    max-width: 1000px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 15px;
+    text-align:center;
+}
+
+h2 {
+  /* this will scale the font based on width of device/browser */
+  font-family: Brush Script MT, Brush Script Std, cursive;
+    font-size: calc( 20px + 4vw );
+}
+
+/* row and column system using 'flexbox' */
+.row {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0 -10px;
+}
+
+/* mobile first: full width column */
+.column {
+    flex: 1 100%;
+}
+
+.content {
+    background-color: white;
+    padding: 10px;
+    margin: 10px;
+}
+
+/* A two column-layout */
+@media screen and (min-width: 600px) {
+    .column {
+       flex: 1 50%;
+    }
+    p.splitter{  column-count: 2; }
+}
+
+/*  A four column layout */
+@media screen and (min-width: 900px) {
+    .column {
+      flex: 25%;
+    }
+}
+/* code https://www.w3schools.com/css/tryit.asp?filename=trycss_buttons_animate3*/
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  /*background-color: #4CAF50;*/
+  background-color: #8B0000;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #FFD700}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
